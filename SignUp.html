@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>G-P-A-S | SignUp</title>
+
+   <link rel="stylesheet" href="./CSS/loader.css">
+   <link rel="stylesheet" href="./CSS/style.css">
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body oncontextmenu="return false">
+     <!-- Loader  -->
+     <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+    <div class="form-container main">
+        <div id="left">
+            
+        <div class="login-input">
+            <form  id="signup-data" action="">
+                <h1>G-P-A-S</h1>
+                <h1>Registeration</h1>
+                <div class="input-box">
+                    <input type="text" id="username" 
+                     name="username" required>
+                     <label>Username</label>
+                     <div class="div">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                     </div>
+                </div>
+                <div class="input-box">
+                    <input type="email" id="email" 
+                     name="email" required>
+                     <label>Email</label>
+                     <div class="div">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                     </div>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="txt_passwd" name="txt_password" required>
+                    <label>Textual Password</label>
+                    <div class="div">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                     </div>
+                </div>
+                <div class="input-box">
+                    <input type="file" id="inpfile" 
+                     name="inpfile" accept="image/*" required>
+                     <div class="div">
+                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                     </div>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="grph_passwd" name="grph_password" required>
+                    <label>Graphical Password</label>
+                    <div class="div">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                     </div>
+                </div>
+                <div class="confirm">
+                    <div class="btn">
+                        <button type="submit">SignUp <i class="fa fa-user-plus" aria-hidden="true"></i></button>
+                    </div> 
+                </div>
+                <div class="alert">
+                    
+                </div>
+            </form>
+        </div>
+        
+        </div>
+        <div id="right">
+            <div class="aside-content">
+                    
+                    <div class="quote">
+                        <span style="color:white">Became a member?</span>
+                    </div>
+                    <form action="index.html">
+                    <div class="btn">
+                        <button >SignIn <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </div>
+           
+                <a id="pixel">
+                <img  id="myimgid" src=""  alt="" class="image" height=400 width=400> 
+                </a>
+
+        </div>  
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha256-6rXZCnFzbyZ685/fMsqoxxZz/QZwMnmwHg+SsNe+C/w=" crossorigin="anonymous"></script>    <script src="./JS/loader.js"></script>
+    <script src="./JS/script.js"></script>
+    <script src="./JS/signup.js"></script>
+   
+</body>
+</html>

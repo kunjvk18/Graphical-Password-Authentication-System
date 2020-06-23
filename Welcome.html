@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Welcome Page</title>
+  
+  
+   <style>
+            * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+
+        body {
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 100vh;
+        }
+
+        .main {
+        text-align: center;
+        width: 80%;
+        height: 80%;
+        opacity: 0;
+        display: none;
+        transition: opacity 1s ease-in;
+        }
+       .main h1{
+            font-size: 50px;
+            margin-bottom: 10px;
+            
+       }
+            .main p {
+        font-size: 25px;
+        color: #333;
+        
+        }
+
+        .btn {
+        display: inline-block;
+        background: purple;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-top: 15px;
+        }
+
+        .btn:hover {
+        opacity: 0.9;
+        }
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .loader > span {
+            display: inline-block;
+            background-color: purple;
+            width: 0px;
+            height: 0px;
+            border-radius: 50%;
+            margin: 0 8px;
+            transform: translate3d(0);
+            animation: bounce 0.6s infinite alternate;
+            }
+
+            .loader > span:nth-child(2) {
+            background-color: palevioletred;
+            animation-delay: 0.2s;
+            }
+
+            .loader > span:nth-child(3) {
+            animation-delay: 0.4s;
+            }
+
+            @keyframes bounce {
+            to {
+                width: 16px;
+                height: 16px;
+                transform: translate3d(0, -16px, 0);
+            }
+            } 
+   </style>
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body oncontextmenu="return false">
+    <!-- Loader  -->
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div> 
+
+    <section class="main">
+        <h1>Welcome To My Site</h1>
+        <p>
+           You are now successfully authenticated.<br>
+           You can now explore our website.<br>
+          </p>
+          <a href="index.html" class="btn">Log Out <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+        
+        </section>
+
+   <script>
+                const loader = document.querySelector('.loader');
+            const main = document.querySelector('.main');
+
+            function init() {
+            setTimeout(() => {
+                loader.style.opacity = 0;
+                loader.style.display = 'none';
+
+                main.style.display = 'block';
+                setTimeout(() => (main.style.opacity = 1), 50);
+            }, 4000);
+            }
+
+            init();
+   </script>
+   <script src="./JS/script.js"></script>
+</body>
+</html>
